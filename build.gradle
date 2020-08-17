@@ -1,0 +1,119 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+
+    def versionMajor = 10
+    def versionMinor = 7
+    def versionPatch = 1
+
+    versionCode = versionMajor * 1000 + versionMinor * 100 + versionPatch
+    versionName = "${versionMajor}.${versionMinor}"
+
+    minSdkVersion = 16
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
+
+    coroutinesVersion = "1.1.1"
+
+    // Support libraries
+    supportRecyclerViewVersion = '1.1.0-beta01'
+    supportCoreVersion = '1.2.0-alpha02'
+    supportCardViewVersion = '1.0.0'
+    supportBrowserVersion = '1.0.0'
+    supportAppCompatVersion = '1.1.0-rc01'
+    supportMaterialVersion = '1.1.0-alpha09'
+    play_core = '1.6.1'
+    ringler_version = '1.0.7'
+    playServicesVersion = "16.0.1"
+    retrofitVersion = "2.4.0"
+    okHttpVersion = "3.9.1"
+    timberVersion = "4.7.1"
+    stethoVersion = "1.5.0"
+    daggerVersion = "2.19"
+    constraintVersion = '2.0.0-beta4'//androidx.constraintlayout:constraintlayout:2.0.0-beta4
+    permissionsDispatcherVersion = '3.3.1'
+    picassoVersion = '2.71828'
+    materialDialogVersion = '0.9.6.0'
+    mpAndroidChart = 'v3.0.2'
+    razorPay = '1.5.4'
+    materialShowcaseView = '1.2.0'
+    leakCanary = '1.6.1'
+
+    // kotlin
+    core_ktx = "1.1.0"
+
+    // Jet-pack components
+    archCoreVersion = '2.2.0-rc03'
+    pagingVersion = '2.1.0'
+    roomVersion = '2.1.0'
+    workManagerVersion = '1.0.1'
+    lifecycle_version = '2.1.0'
+    jetbrain_annotation = '16.0.2'
+
+    // Google play services
+    // https://developers.google.com/android/guides/setup
+    // https://developers.google.com/android/guides/releases
+    googlePlaces = '17.0.0'
+    googleAuth = '17.0.0'
+    googleMaps = '17.0.0'
+    googleLocation = '17.0.0'
+    googleAnalytics = '17.0.0'
+    googleVision = '17.0.2'
+
+    // Firebase dependencies
+    // https://firebase.google.com/support/release-notes/android
+    firebaseCore = '17.0.1'
+    cloudMessaging = '19.0.1'
+    crashlytics = '2.9.3'
+    remoteConfig = '18.0.0'
+    auth = '18.1.0'
+    realtimeDatabase = '18.0.0'
+    cloudStorage = '18.1.0'
+    perf = '18.0.1'
+    dynamicLink = '18.0.0'
+    mlKitVersion='18.1.1'
+    smartReplyVersion='18.0.0'
+
+    // Lottie
+    lottie = '3.0.1'
+
+    // Test compile dependencies
+    guavaVersion = '18.0'
+    junitVersion = '4.12'
+    mockitoVersion = '2.7.19'
+    powerMockito = '1.6.2'
+    hamcrestVersion = '1.3'
+    runnerVersion = '0.5'
+    rulesVersion = '0.5'
+    espressoVersion = '2.2.2'
+    testRunnerVersion = '1.1.0-alpha4'
+
+}
